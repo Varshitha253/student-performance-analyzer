@@ -83,23 +83,50 @@ p, label {
     color: #111827 !important;
 }
 
-/* ===== Buttons ===== */
+
+/* ===== Buttons: clear, accessible text ===== */
 .stButton > button,
-.stFormSubmitButton > button {
-    background: #047857;
-    color: #FFFFFF;
-    border: 1px solid #047857;
+.stFormSubmitButton > button,
+.stDownloadButton > button {
+    background-color: #047857 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #047857 !important;
     border-radius: 9px;
     min-height: 42px;
-    font-weight: 600;
-    transition: all 0.2s ease;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    filter: none !important;
+    box-shadow: none;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.stButton > button p,
+.stFormSubmitButton > button p,
+.stDownloadButton > button p,
+.stButton > button span,
+.stFormSubmitButton > button span,
+.stDownloadButton > button span {
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+    font-weight: 700 !important;
 }
 
 .stButton > button:hover,
-.stFormSubmitButton > button:hover {
-    background: #065F46;
-    border-color: #065F46;
-    color: #FFFFFF;
+.stFormSubmitButton > button:hover,
+.stDownloadButton > button:hover {
+    background-color: #065F46 !important;
+    border-color: #065F46 !important;
+    color: #FFFFFF !important;
+}
+
+.stButton > button:focus,
+.stFormSubmitButton > button:focus,
+.stDownloadButton > button:focus {
+    outline: 3px solid #6EE7B7 !important;
+    outline-offset: 2px;
 }
 
 /* ===== Inputs and selectors ===== */
