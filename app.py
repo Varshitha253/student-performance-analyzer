@@ -288,7 +288,10 @@ with col2:
 with col3:
     average_attendance = df["Attendance"].mean()
     st.metric("Average Attendance", f"{average_attendance:.1f}%")
-    st.markdown("## 📊 Subject Performance")
+    st.markdown(
+    "<h3 style='text-align: center;'>Subject Performance</h3>",
+    unsafe_allow_html=True
+)
 st.caption("Compare average marks across academic subjects.")
 
 subject_averages = df[["Maths", "Science"]].mean()
